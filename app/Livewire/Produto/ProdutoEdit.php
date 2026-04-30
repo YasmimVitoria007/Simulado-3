@@ -11,7 +11,7 @@ class ProdutoEdit extends Component
     public $valor;
     public $qtd_estoque;
     public $qtd_minima;
-    public $produtoId;
+    public $produto_Id;
 
     public function mount($id){
         $produto = Produto::find($id);
@@ -25,7 +25,27 @@ class ProdutoEdit extends Component
         $this->valor = $produto->valor;
         $this->qtd_estoque = $produto->qtd_estoque;
         $this->qtd_minima = $produto->qtd_minima;
-        $this->produtoId = $produto->produtoId;
+        $this->produto_Id = $produto->id;
+
+    }
+
+        public function update(){
+        $produto = Produto::find($this->produto_Id);
+
+        if($produto == null){
+            session()->flash('error', 'Não encontrado');
+            return redirect()->route('produto.index');
+        }
+
+        $produto->nome = $this->nome;
+        $produto->valor = $this->valor;
+        $produto->qtd_estoque = $this->qtd_estoque;
+        $produto->qtd_minima = $this->qtd_minima;
+
+        $produto->save();
+        session()->flash('success', 'Atualizado');
+            return redirect()->route('produto.index');
+
 
     }
 
