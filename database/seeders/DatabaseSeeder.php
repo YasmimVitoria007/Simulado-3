@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
         User::create([
             'name' => 'Admin',
             'email' => 'admin@senai.br',
-            'password' => Hash::me('123'),
+            'password' => Hash::make('123'),
         ]);
 
         Produto::create([
