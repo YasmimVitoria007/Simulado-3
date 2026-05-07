@@ -25,7 +25,7 @@
                         <div class="col-md-4">
                             <div class="mb-3">
                                 <label class="form-label">Produto</label>
-                                <select class="form-select" wire:model='idprodutoSelecionado'>
+                                <select class="form-select" wire:model='idProdutoSelecionado'>
                                     <option value="">Selecione um produto</option>
                                     @foreach ($produtos as $produto)
                                     <option value="{{$produto->id}}">
@@ -42,6 +42,7 @@
                                 <div class="md-3">
                                     <label class="form-label">Tipos</label>
                                     <select class="form-select" wire:model='tipo'>
+                                        <option>Selecione uma opção</option>
                                         <option value="entrada">Entrada</option>
                                         <option value="saida">Saída</option>
                                     </select>
@@ -51,8 +52,8 @@
                             <div class="col-md-3">
                                 <div class="mb-3">
                                     <label class="form-label">Quantidade</label>
-                                    <input type="number" class="form-control" wire:model='quantidade'>
-                                    @error('quantidade')
+                                    <input type="number" class="form-control" wire:model='quantidade_movimentada'>
+                                    @error('quantidade_movimentada')
                                     <span class="text-danger"{{$message}}></span>
                                 @enderror
                                 </div>

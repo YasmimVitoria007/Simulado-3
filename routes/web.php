@@ -11,5 +11,5 @@ route::get('/produto/create', ProdutoCreate::class)->name('produto.create');
 route::get('/produto/edit/{id}', ProdutoEdit::class)->name('produto.edit');
 route::get('/produto', ProdutoIndex::class)->name('produto.index');
 
-route::get('/movimentacao', MovimentacaoCreate::class)->name('movimentacao.create');
+route::get('/movimentacao/create', MovimentacaoCreate::class)->name('movimentacao.create');
 route::get('/movimentacao/index', MovimentacaoIndex::class)->name('movimentacao.index');
