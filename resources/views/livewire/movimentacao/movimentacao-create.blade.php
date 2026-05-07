@@ -51,7 +51,7 @@
                             <div class="col-md-3">
                                 <div class="mb-3">
                                     <label class="form-label">Quantidade</label>
-                                    <input type="number" class="fm-control" wire:model='quantidade'>
+                                    <input type="number" class="form-control" wire:model='quantidade'>
                                     @error('quantidade')
                                     <span class="text-danger"{{$message}}></span>
                                 @enderror
@@ -61,7 +61,7 @@
                             <div class="col-md-2">
                                 <div class="mb-3">
                                     <label class="form-label">Data</label>
-                                    <input type="date" class="fm-control" wire:model='data_movimentacao'>
+                                    <input type="date" class="form-control" wire:model='data_movimentacao'>
                                     @error('data_movimentacao')
                                     <span class="text-danger"{{$message}}></span>
                                 @enderror
