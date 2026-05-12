@@ -41,5 +41,6 @@ class DatabaseSeeder extends Seeder
             'qtd_estoque' => 0,
             'qtd_minima' => 8,
         ]);
+
     }
 }
